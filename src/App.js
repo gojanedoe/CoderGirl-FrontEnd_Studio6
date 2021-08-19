@@ -3,8 +3,9 @@ import "./App.css";
 import { STARTER_LIST } from "./data/starterList";
 import { CATEGORIES } from "./data/categoriesList";
 
-const App = () => {
+import CategoryList from "./components/CategoryList";
 
+const App = () => {
     return (
         <div className="App">
             <h1>Grocery List</h1>
@@ -12,7 +13,7 @@ const App = () => {
                 {/* TODO: Map over CategoRries to display a <CategoryList> component for each category */}
                 {/* First try to just make the category names appear before implementing <CategoryList> components */}
                 {CATEGORIES.map((category) => (
-                    <p>{category}</p>
+                    <CategoryList key={category} categoryName={category} />
                 ))}
             </div>
         </div>
