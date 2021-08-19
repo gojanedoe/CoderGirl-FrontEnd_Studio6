@@ -13,7 +13,11 @@ const App = () => {
                 {/* TODO: Map over CategoRries to display a <CategoryList> component for each category */}
                 {/* First try to just make the category names appear before implementing <CategoryList> components */}
                 {CATEGORIES.map((category) => (
-                    <CategoryList key={category} categoryName={category} />
+                    <CategoryList
+                        key={category}
+                        categoryName={category}
+                        filteredGroceryList={STARTER_LIST.filter(item => item.category === category)}
+                    />
                 ))}
             </div>
         </div>
