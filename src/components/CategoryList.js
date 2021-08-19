@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import GroceryItem from "./GroceryItem";
+
 const CategoryList = (props) => {
     const { categoryName, filteredGroceryList } = props;
 
@@ -14,7 +16,7 @@ const CategoryList = (props) => {
             <h2>{categoryName}</h2>
             <ul>
                 {filteredGroceryList.map((item) => (
-                    <li>{item.name}</li>
+                    <GroceryItem key={item.name} item={item} />
                 ))}
             </ul>
             <input
