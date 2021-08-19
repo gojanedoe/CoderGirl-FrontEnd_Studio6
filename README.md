@@ -71,7 +71,7 @@ Once complete, the app should now look like this:
 
 ### A. Filtering the grocery list
 
-- [ ] `<CategoryList>` will hold `<GroceryItem>` components for each grocery item. You first need to get the grocery list data to `CategoryList` to be passed to `<GroceryItem>`. Inside `<App>`, pass a second prop to `<CategoryList>` called `filteredGroceryList`.
+- [ ] `<CategoryList>` will hold `<GroceryItem>` components for each grocery item. You first need to get the grocery list data to `CategoryList` to be passed to `<GroceryItem>`. Inside `<App>`, pass a second prop to `<CategoryList>` called `filtered.`.
 - [ ] For the value of `filteredGroceryList`, you are going to use the [`.filter()` array method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) to only pass the grocery items for that category. That will look something like this:
 
 ```javascript
@@ -110,7 +110,7 @@ Once this is complete, you should see an empty checkbox and a delete button appe
 
 ### B. Adding an Event Listener when a checkbox is clicked
 
-- [ ] In `GroceryList.js`, an onClick attribute has already been added with `handleItemClick()` getting called every time the item name is clicked. The expected behavior when this event occurs is to either check or uncheck the grocery item's checkbox. This means updating `groceryList`'s value to reflect the new state. To do this, we'll use `groceryList`'s setter function.
+- [ ] In `GroceryItem.js`, an onClick attribute has already been added with `handleItemClick()` getting called every time the item name is clicked. The expected behavior when this event occurs is to either check or uncheck the grocery item's checkbox. This means updating `groceryList`'s value to reflect the new state. To do this, we'll use `groceryList`'s setter function.
 
 Tips:
 
