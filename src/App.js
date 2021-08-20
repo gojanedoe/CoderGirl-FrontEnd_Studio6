@@ -8,8 +8,6 @@ import CategoryList from "./components/CategoryList";
 const App = () => {
     const [groceryList, setGroceryList] = useState(STARTER_LIST);
 
-    console.log(groceryList);
-
     return (
         <div className="App">
             <h1>Grocery List</h1>
