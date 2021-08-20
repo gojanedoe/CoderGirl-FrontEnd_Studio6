@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import GroceryItem from "./GroceryItem";
 
 const CategoryList = (props) => {
-    const { categoryName, filteredGroceryList } = props;
+    const { categoryName, filteredGroceryList, handleGroceryList } = props;
 
     const handleInputKeyPress = (e) => {
         if (e.key === "Enter") {
@@ -16,7 +16,11 @@ const CategoryList = (props) => {
             <h2>{categoryName}</h2>
             <ul>
                 {filteredGroceryList.map((item) => (
-                    <GroceryItem key={item.name} item={item} />
+                    <GroceryItem
+                        key={item.name}
+                        item={item}
+                        handleGroceryList={handleGroceryList}
+                    />
                 ))}
             </ul>
             <input
