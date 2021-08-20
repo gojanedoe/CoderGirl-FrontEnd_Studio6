@@ -4,10 +4,17 @@ import GroceryItem from "./GroceryItem";
 
 const CategoryList = (props) => {
     const { categoryName, filteredGroceryList, handleGroceryList } = props;
+    const [inputVal, setInputVal] = useState("");
 
     const handleInputKeyPress = (e) => {
         if (e.key === "Enter") {
             // TODO: Update groceryList state to add new item
+            handleGroceryList((prevState) => {
+                return [
+                    ...prevState,
+                    { name: inputVal, checked: false, category: categoryName },
+                ];
+            });
         }
     };
 
@@ -26,9 +33,11 @@ const CategoryList = (props) => {
             <input
                 type="text"
                 placeholder="Add new item"
-                value=""
+                value={inputVal}
                 onKeyDown={handleInputKeyPress}
-                onChange={() => {}}
+                onChange={(e) => {
+                    setInputVal(e.target.value);
+                }}
             />
         </div>
     );
