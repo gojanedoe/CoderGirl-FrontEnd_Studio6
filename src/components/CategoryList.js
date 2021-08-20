@@ -8,13 +8,16 @@ const CategoryList = (props) => {
 
     const handleInputKeyPress = (e) => {
         if (e.key === "Enter") {
-            // TODO: Update groceryList state to add new item
+            // Update groceryList state to add new item
             handleGroceryList((prevState) => {
                 return [
                     ...prevState,
                     { name: inputVal, checked: false, category: categoryName },
                 ];
             });
+
+            // Clear the text input after an item is entered
+            setInputVal("");
         }
     };
 
