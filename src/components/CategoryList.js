@@ -7,7 +7,7 @@ const CategoryList = (props) => {
     const [inputVal, setInputVal] = useState("");
 
     const handleInputKeyPress = (e) => {
-        if (e.key === "Enter") {
+        if (e.key === "Enter" && inputVal !== "") {
             // Update groceryList state to add new item
             handleGroceryList((prevState) => {
                 return [
